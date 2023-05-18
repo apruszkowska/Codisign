@@ -5,13 +5,13 @@ export const RoutingLinks = () => {
     <header>
       <nav>
         <ul>
-          <li>
+          <li className="logo">
             <Link to="/">CODISIGN</Link>
           </li>
-          <li>
+          <li className="register">
             <Link to="/register">REGISTER</Link>
           </li>
-          <li>
+          <li className="login">
             <Link to="/login">LOGIN</Link>
           </li>
         </ul>
