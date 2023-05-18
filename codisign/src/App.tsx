@@ -3,8 +3,8 @@ import ErrorBoundary from "./ErrorBoundary/ErrorBoundary";
 import { Route, Routes } from "react-router-dom";
 
 import { HomePage } from "./HomePage/HomePage";
-import { Login } from "./Login/Login";
 import { Register } from "./Register/Register";
+import { Login } from "./Login/Login";
 
 function App() {
   return (
@@ -15,11 +15,11 @@ function App() {
           <Route index element={<HomePage />} />
         </Route>
         <Route path="register">
-          <Route index element={<Login />} />
+          <Route index element={<Register />} />
         </Route>
 
         <Route path="login">
-          <Route index element={<Register />} />
+          <Route index element={<Login />} />
         </Route>
       </Routes>
     </ErrorBoundary>
