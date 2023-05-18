@@ -10,7 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/styled": "^11.11.0",
+    "@mui/joy": "^5.0.0-alpha.80",
     "@mui/material": "^5.13.1",
+    "@mui/styled-engine": "^5.12.3",
     "@types/react-router-dom": "^5.3.3",
     "formik": "^2.2.9",
     "react": "^18.2.0",
