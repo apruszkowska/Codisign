@@ -1,6 +1,6 @@
 import { useFormik, FormikProps } from "formik";
 import * as yup from "yup";
-import TextField from "@mui/material/TextField";
+import { TextField } from "@mui/material";
 
 const yupSchema = yup.object({
   login: yup.string().required("Login is required"),

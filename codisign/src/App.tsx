@@ -1,6 +1,7 @@
 import { RoutingLinks } from "./routing/routingLinks";
 import ErrorBoundary from "./ErrorBoundary/ErrorBoundary";
 import { Route, Routes } from "react-router-dom";
+import { Register } from "./Register/Register";
 import { HomePage } from "./HomePage/HomePage";
 import { Login } from "./Login/Login";
 
@@ -17,7 +18,7 @@ function App() {
         </Route>
 
         <Route path="login">
-          <Route index element={<div>register</div>} />
+          <Route index element={<Register />} />
         </Route>
       </Routes>
     </ErrorBoundary>
