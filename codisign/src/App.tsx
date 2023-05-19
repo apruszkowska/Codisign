@@ -6,6 +6,7 @@ import { HomePage } from "./HomePage/HomePage";
 import { Register } from "./Register/Register";
 import { Login } from "./Login/Login";
 import { Courses } from "./Courses/Courses";
+import { AddCourse } from "./Courses/AddCourse";
 
 function App() {
   return (
@@ -24,6 +25,10 @@ function App() {
 
         <Route path="allCourses">
           <Route index element={<Courses />} />
+        </Route>
+
+        <Route path="addCourse">
+          <Route index element={<AddCourse />} />
         </Route>
       </Routes>
     </ErrorBoundary>
