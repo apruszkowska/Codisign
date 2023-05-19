@@ -5,11 +5,12 @@ import { Route, Routes } from "react-router-dom";
 import { HomePage } from "./HomePage/HomePage";
 import { Register } from "./Register/Register";
 import { Login } from "./Login/Login";
+import { Courses } from "./Courses/Courses";
+import { Rtt } from "./routing/rtt";
 
 function App() {
   return (
     <ErrorBoundary>
-      <RoutingLinks />
       <Routes>
         <Route path="/">
           <Route index element={<HomePage />} />
@@ -20,6 +21,10 @@ function App() {
 
         <Route path="login">
           <Route index element={<Login />} />
+        </Route>
+
+        <Route path="allCourses">
+          <Route index element={<Courses />} />
         </Route>
       </Routes>
     </ErrorBoundary>

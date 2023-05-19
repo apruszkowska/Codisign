@@ -1,0 +1,64 @@
+.containerCourses {
+  background-color: grey;
+  height: 100vh;
+  background-color: rgba(238, 239, 255, 1);
+  overflow: hidden;
+}
+
+.gridContainerCourses div {
+  background-color: white;
+  outline-style: #020f8f;
+  aspect-ratio: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas:
+    "one one two two five five six six"
+    "one one two two five five six six"
+    "three three four four seven seven eight eigth"
+    "three three four four seven seven eight eigth";
+  gap: 10px;
+  grid-template-columns: repeat(8, 80px);
+  grid-template-rows: repeat(8, 100px);
+  justify-content: center;
+}
+
+.grid > * {
+  background-color: rgba(255, 255, 255, 0.651);
+  border-radius: 5px;
+  padding: 10px;
+  outline: #020f8f solid;
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.eight {
+  grid-area: eight;
+}

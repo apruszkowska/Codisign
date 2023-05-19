@@ -1,6 +1,7 @@
 import { useFormik, FormikProps } from "formik";
 import * as yup from "yup";
 import { TextField } from "@mui/material";
+import { RoutingLinks } from "../routing/routingLinks";
 
 const yupSchema = yup.object({
   login: yup.string().required("Login is required"),
@@ -50,19 +51,22 @@ export const Login = () => {
   });
 
   return (
-    <div className="containerLoginForm containerForm">
-      <form className="loginForm form" onSubmit={formik.handleSubmit}>
-        <label className="loginLabel labelForm" htmlFor="form">
-          Login
-        </label>
-        <div className="loginFormInput formInput">
-          <FormInput formik={formik} accessor="login" />
-          <FormInput formik={formik} accessor="password" />
-        </div>
-        <button className="loginButton buttonForm" type="submit">
-          Login
-        </button>
-      </form>
+    <div>
+      <RoutingLinks />
+      <div className="containerLoginForm containerForm">
+        <form className="loginForm form" onSubmit={formik.handleSubmit}>
+          <label className="loginLabel labelForm" htmlFor="form">
+            Login
+          </label>
+          <div className="loginFormInput formInput">
+            <FormInput formik={formik} accessor="login" />
+            <FormInput formik={formik} accessor="password" />
+          </div>
+          <button className="loginButton buttonForm" type="submit">
+            Login
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

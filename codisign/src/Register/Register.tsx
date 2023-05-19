@@ -3,6 +3,7 @@ import * as yup from "yup";
 import { useFormik, FormikProps } from "formik";
 import { TextField } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { RoutingLinks } from "../routing/routingLinks";
 
 const yupSchema = yup.object({
   name: yup.string().required("Name jest wymagane"),
@@ -68,27 +69,30 @@ export const Register = () => {
     },
   });
   return (
-    <div className="containerRegisterForm containerForm">
-      <form className="registerForm form" onSubmit={formik.handleSubmit}>
-        <label className="registerLabel labelForm" htmlFor="form">
-          Register
-        </label>
-        <div className="registerFormInput formInput">
-          <FormInput formik={formik} accessor="name" />
-          <FormInput formik={formik} accessor="surname" />
-          <FormInput formik={formik} accessor="email" />
-          <FormInput formik={formik} accessor="login" />
-          <FormInput formik={formik} accessor="password" type="password" />
-          <FormInput
-            formik={formik}
-            accessor="retypePassword"
-            type="password"
-          />
-        </div>
-        <button className="registerButton buttonForm" type="submit">
-          Register
-        </button>
-      </form>
+    <div>
+      <RoutingLinks />
+      <div className="containerRegisterForm containerForm">
+        <form className="registerForm form" onSubmit={formik.handleSubmit}>
+          <label className="registerLabel labelForm" htmlFor="form">
+            Register
+          </label>
+          <div className="registerFormInput formInput">
+            <FormInput formik={formik} accessor="name" />
+            <FormInput formik={formik} accessor="surname" />
+            <FormInput formik={formik} accessor="email" />
+            <FormInput formik={formik} accessor="login" />
+            <FormInput formik={formik} accessor="password" type="password" />
+            <FormInput
+              formik={formik}
+              accessor="retypePassword"
+              type="password"
+            />
+          </div>
+          <button className="registerButton buttonForm" type="submit">
+            Register
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
