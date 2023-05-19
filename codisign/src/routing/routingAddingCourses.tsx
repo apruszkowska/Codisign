@@ -1,18 +1,19 @@
 import { Link } from "react-router-dom";
+import RoutingCoursesStyles from "./RoutingCourses.module.css";
 
-export const RoutingLinks = () => {
+export const RoutingAddingLinks = () => {
   return (
-    <header>
+    <header className={RoutingCoursesStyles.headerRoutingCourse}>
       <nav>
         <ul>
-          <li className="logo">
+          <li className={RoutingCoursesStyles.logoRoutingCourse}>
             <Link to="/">CODISIGN</Link>
           </li>
-          <li className="register">
-            <Link to="/register">REGISTER</Link>
+          <li className={RoutingCoursesStyles.elementAddRoutingCourse}>
+            <Link to="/myCourses">YOUR COURSES</Link>
           </li>
-          <li className="login">
-            <Link to="/login">LOGIN</Link>
+          <li className={RoutingCoursesStyles.elementAddRoutingCourse}>
+            <Link to="/allCourses">ALL COURSES</Link>
           </li>
         </ul>
       </nav>
