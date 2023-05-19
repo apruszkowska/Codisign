@@ -6,7 +6,6 @@ import { HomePage } from "./HomePage/HomePage";
 import { Register } from "./Register/Register";
 import { Login } from "./Login/Login";
 import { Courses } from "./Courses/Courses";
-import { Rtt } from "./routing/rtt";
 
 function App() {
   return (

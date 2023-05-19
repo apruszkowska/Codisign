@@ -3,6 +3,10 @@
   height: 100vh;
   background-color: rgba(238, 239, 255, 1);
   overflow: hidden;
+  background-image: url("../assets/waves2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 400px;
 }
 
 .gridContainerCourses div {
@@ -19,8 +23,8 @@
     "three three four four seven seven eight eigth"
     "three three four four seven seven eight eigth";
   gap: 10px;
-  grid-template-columns: repeat(8, 80px);
-  grid-template-rows: repeat(8, 100px);
+  grid-template-columns: repeat(8, 75px);
+  grid-template-rows: repeat(8, 75px);
   justify-content: center;
 }
 
@@ -28,7 +32,7 @@
   background-color: rgba(255, 255, 255, 0.651);
   border-radius: 5px;
   padding: 10px;
-  outline: #020f8f solid;
+  outline: rgba(75, 39, 178, 0.74) solid;
 }
 
 .one {
@@ -61,4 +65,16 @@
 
 .eight {
   grid-area: eight;
+}
+
+.titleCourses {
+  font-size: 3rem;
+  text-align: center;
+  margin: 70px 0;
+  color: #020f8f;
+}
+
+.grid div:hover {
+  background-color: rgba(75, 39, 178, 0.74);
+  color: white;
 }
