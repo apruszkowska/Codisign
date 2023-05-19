@@ -26,6 +26,7 @@
   grid-template-columns: repeat(8, 75px);
   grid-template-rows: repeat(8, 75px);
   justify-content: center;
+  height: 400px;
 }
 
 .grid > * {
@@ -33,6 +34,7 @@
   border-radius: 5px;
   padding: 10px;
   outline: rgba(75, 39, 178, 0.74) solid;
+  overflow-wrap: break-word;
 }
 
 .one {
@@ -77,4 +79,21 @@
 .grid div:hover {
   background-color: rgba(75, 39, 178, 0.74);
   color: white;
+}
+
+.addCourseLink a {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #020f8f;
+}
+
+.addCourseLink {
+  overflow-wrap: break-word;
+  text-align: center;
+}
+
+a.plusCourseLink {
+  font-size: 8rem;
+  font-weight: 800;
+  color: #020f8f;
 }
