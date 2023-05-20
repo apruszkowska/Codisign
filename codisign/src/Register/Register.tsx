@@ -4,6 +4,7 @@ import { useFormik, FormikProps } from "formik";
 import { TextField } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { RoutingLinks } from "../routing/routingLinks";
+import AddNewCourseStyles from "../Courses/AddCourse.module.css";
 
 const yupSchema = yup.object({
   name: yup.string().required("Name jest wymagane"),
@@ -31,6 +32,7 @@ const FormInput = ({
   return (
     <div>
       <TextField
+        className={AddNewCourseStyles.inputAddCourse}
         error={Boolean(formik.touched[accessor] && formik.errors[accessor])}
         helperText={
           formik.touched[accessor] && formik.errors[accessor]

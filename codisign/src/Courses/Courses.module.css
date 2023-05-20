@@ -144,8 +144,15 @@ a.plusCourseLink {
   }
 
   .addCourseLink {
-    overflow-wrap: break-word;
-    text-align: center;
-    margin-top: 100px;
+    margin-top: 50px;
+  }
+
+  a.addCourseLinkText {
+    font-size: 3.3rem;
+    margin-right: 20px;
+  }
+
+  .titleCourses {
+    font-size: 4rem;
   }
 }

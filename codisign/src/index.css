@@ -222,3 +222,124 @@ a {
     margin: 30px;
   }
 }
+
+@media only screen and (min-width: 600px) {
+  html,
+  body {
+    height: 100%;
+    font-family: "Lexend", sans-serif;
+    font-size: 10px;
+    background: url("./assets/wavesBigger2.png") no-repeat bottom,
+      linear-gradient(to bottom, #343563 0%, #4926ad 100%);
+    background-size: contain;
+  }
+  .logo {
+    font-size: 3rem;
+  }
+
+  .login,
+  .register {
+    font-size: 2.3rem;
+  }
+
+  .linkToCourses {
+    font-weight: 700;
+    font-size: 3.2rem;
+    margin-top: 100px;
+  }
+  .mainStartContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px 200px;
+  }
+
+  .titleMainStart {
+    color: white;
+    font-size: 5.8rem;
+    margin-bottom: 20px;
+  }
+
+  .descriptionMainStart {
+    font-size: 1.8rem;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.844);
+    border-radius: 20px;
+  }
+
+  .labelForm {
+    font-size: 4rem;
+    color: #020f8f;
+  }
+
+  .containerForm {
+    margin-top: 60px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .logo {
+    font-size: 3.4rem;
+  }
+
+  .login,
+  .register {
+    font-size: 2.6rem;
+  }
+
+  .register {
+    margin-left: 100px;
+  }
+
+  .linkToCourses {
+    font-weight: 700;
+    font-size: 3.2rem;
+    margin-top: 100px;
+  }
+  .mainStartContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px 200px;
+  }
+
+  .titleMainStart {
+    color: white;
+    font-size: 6rem;
+    margin-bottom: 20px;
+  }
+
+  .descriptionMainStart {
+    font-size: 2rem;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.844);
+    border-radius: 20px;
+  }
+
+  .labelForm {
+    font-size: 4.4rem;
+    color: #020f8f;
+  }
+
+  .containerForm {
+    margin-top: 70px;
+  }
+}

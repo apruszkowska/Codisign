@@ -2,6 +2,7 @@ import { useFormik, FormikProps } from "formik";
 import * as yup from "yup";
 import { TextField } from "@mui/material";
 import { RoutingLinks } from "../routing/routingLinks";
+import AddNewCourseStyles from "../Courses/AddCourse.module.css";
 
 const yupSchema = yup.object({
   login: yup.string().required("Login is required"),
@@ -20,6 +21,7 @@ const FormInput = ({
   return (
     <div>
       <TextField
+        className={AddNewCourseStyles.inputAddCourse}
         error={Boolean(formik.touched[accessor] && formik.errors[accessor])}
         helperText={
           formik.touched[accessor] && formik.errors[accessor]
