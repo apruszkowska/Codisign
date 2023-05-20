@@ -343,3 +343,66 @@ a {
     margin-top: 70px;
   }
 }
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .logo {
+    font-size: 3.6rem;
+  }
+
+  .login,
+  .register {
+    font-size: 2.8rem;
+  }
+
+  .register {
+    margin-left: 120px;
+  }
+
+  .linkToCourses {
+    font-weight: 700;
+    font-size: 3.5rem;
+    margin-top: 110px;
+  }
+  .mainStartContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px 200px;
+  }
+
+  .titleMainStart {
+    color: white;
+    font-size: 6.2rem;
+    margin-bottom: 20px;
+  }
+
+  .descriptionMainStart {
+    font-size: 2.2rem;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.844);
+    border-radius: 20px;
+  }
+
+  .labelForm {
+    font-size: 4.6rem;
+    color: #020f8f;
+  }
+
+  .containerForm {
+    margin-top: 70px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

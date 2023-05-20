@@ -156,3 +156,188 @@ a.plusCourseLink {
     font-size: 4rem;
   }
 }
+
+@media only screen and (min-width: 768px) {
+  .containerCourses {
+    background-color: grey;
+    height: 100vh;
+    background-color: rgba(238, 239, 255, 1);
+    overflow: hidden;
+    background-image: url("../assets/wavesBigger.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 112vw;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .containerCourses {
+    background-color: grey;
+    height: 100vh;
+    background-color: rgba(238, 239, 255, 1);
+    overflow: hidden;
+    background-image: url("../assets/wavesBigger.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 112vw;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .containerCourses {
+    background-color: grey;
+    height: 100vh;
+    background-color: rgba(238, 239, 255, 1);
+    overflow: hidden;
+    background-image: url("../assets/wavesBigger.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 112vw;
+  }
+  .grid {
+    display: grid;
+    grid-template-areas:
+      "one one two two five five six six"
+      "one one two two five five six six"
+      "three three four four seven seven eight eigth"
+      "three three four four seven seven eight eigth";
+    gap: 10px;
+    grid-template-columns: repeat(8, 100px);
+    grid-template-rows: repeat(8, 100px);
+    justify-content: center;
+    height: 400px;
+  }
+  .eight {
+    grid-area: eight;
+    width: 210px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .containerCourses {
+    background-color: grey;
+    height: 100vh;
+    background-color: rgba(238, 239, 255, 1);
+    overflow: hidden;
+    background-image: url("../assets/wavesBigger3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 130vw;
+  }
+  .grid {
+    display: grid;
+    grid-template-areas:
+      "one one two two five five six six"
+      "one one two two five five six six"
+      "three three four four seven seven eight eigth"
+      "three three four four seven seven eight eigth";
+    gap: 10px;
+    grid-template-columns: repeat(8, 100px);
+    grid-template-rows: repeat(8, 100px);
+    justify-content: center;
+    height: 400px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .containerCourses {
+    background-color: grey;
+    height: 100vh;
+    background-color: rgba(238, 239, 255, 1);
+    overflow: hidden;
+    background-image: url("../assets/wavesBigger3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 130vw;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-areas:
+      "one one two two five five six six"
+      "one one two two five five six six"
+      "three three four four seven seven eight eigth"
+      "three three four four seven seven eight eigth";
+    gap: 10px;
+    grid-template-columns: repeat(8, 120px);
+    grid-template-rows: repeat(8, 120px);
+    justify-content: center;
+    height: 400px;
+  }
+  .eight {
+    grid-area: eight;
+    width: 250px;
+  }
+  .addCourseLink {
+    margin-top: 250px;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .containerCourses {
+    background-color: grey;
+    height: 100vh;
+    background-color: rgba(238, 239, 255, 1);
+    overflow: hidden;
+    background-image: url("../assets/wavesBigger3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 130vw;
+  }
+  .grid {
+    display: grid;
+    grid-template-areas:
+      "one one two two five five six six"
+      "one one two two five five six six"
+      "three three four four seven seven eight eigth"
+      "three three four four seven seven eight eigth";
+    gap: 10px;
+    grid-template-columns: repeat(8, 140px);
+    grid-template-rows: repeat(8, 140px);
+    justify-content: center;
+    height: 400px;
+  }
+  .eight {
+    grid-area: eight;
+    width: 290px;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .containerCourses {
+    background-color: grey;
+    height: 100vh;
+    background-color: rgba(238, 239, 255, 1);
+    overflow: hidden;
+    background-image: url("../assets/wavesBigger3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 130vw;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-areas:
+      "one one two two five five six six"
+      "one one two two five five six six"
+      "three three four four seven seven eight eigth"
+      "three three four four seven seven eight eigth";
+    gap: 10px;
+    grid-template-columns: repeat(8, 160px);
+    grid-template-rows: repeat(8, 160px);
+    justify-content: center;
+    height: 400px;
+  }
+  .eight {
+    grid-area: eight;
+    width: 330px;
+  }
+  .addCourseLink {
+    margin-top: 330px;
+  }
+
+  .addCourseLink a {
+    font-size: 5rem;
+  }
+}
