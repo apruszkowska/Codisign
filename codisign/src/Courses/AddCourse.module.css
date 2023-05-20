@@ -1,0 +1,28 @@
+.containerAddCourse {
+  display: flex;
+  justify-content: center;
+}
+
+.formAddCourse {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.844);
+  border-radius: 20px;
+  width: 250px;
+  padding: 20px 0;
+}
+
+.titleAddCourse {
+  font-size: 3rem;
+  text-align: center;
+  margin: 20px 0;
+  color: #020f8f;
+  font-weight: 800;
+}
+
+.buttonAddCourse {
+  margin-top: 20px;
+}

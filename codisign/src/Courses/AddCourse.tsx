@@ -1,5 +1,6 @@
 import { RoutingAddingLinks } from "../routing/routingAddingCourses";
 import CoursesStyles from "./Courses.module.css";
+import AddNewCourseStyles from "./AddCourse.module.css";
 import { useFormik, FormikProps } from "formik";
 import * as yup from "yup";
 import { TextField } from "@mui/material";
@@ -77,25 +78,33 @@ export const AddCourse = () => {
     <div>
       <RoutingAddingLinks />
       <section className={CoursesStyles.containerCourses}>
-        <form
-          className={CoursesStyles.containerCourses}
-          onSubmit={formikAddCourse.handleSubmit}
-        >
-          <FormInputAddCourse formik={formikAddCourse} accessor="name" />
-          <FormInputAddCourse formik={formikAddCourse} accessor="startDate" />
-          <FormInputAddCourse formik={formikAddCourse} accessor="endDate" />
-          <FormInputAddCourse formik={formikAddCourse} accessor="startTime" />
-          <FormInputAddCourse formik={formikAddCourse} accessor="endTime" />
-          <FormInputAddCourse formik={formikAddCourse} accessor="language" />
-          <FormInputAddCourse formik={formikAddCourse} accessor="location" />
-          <FormInputAddCourse formik={formikAddCourse} accessor="trainer" />
-          <FormInputAddCourse formik={formikAddCourse} accessor="level" />
-          <FormInputAddCourse
-            formik={formikAddCourse}
-            accessor="uploadAnImage"
-          />
-          <button type="submit">Send</button>
-        </form>
+        <h2 className={AddNewCourseStyles.titleAddCourse}>Add your course!</h2>
+        <div className={AddNewCourseStyles.containerAddCourse}>
+          <form
+            className={AddNewCourseStyles.formAddCourse}
+            onSubmit={formikAddCourse.handleSubmit}
+          >
+            <FormInputAddCourse formik={formikAddCourse} accessor="name" />
+            <FormInputAddCourse formik={formikAddCourse} accessor="startDate" />
+            <FormInputAddCourse formik={formikAddCourse} accessor="endDate" />
+            <FormInputAddCourse formik={formikAddCourse} accessor="startTime" />
+            <FormInputAddCourse formik={formikAddCourse} accessor="endTime" />
+            <FormInputAddCourse formik={formikAddCourse} accessor="language" />
+            <FormInputAddCourse formik={formikAddCourse} accessor="location" />
+            <FormInputAddCourse formik={formikAddCourse} accessor="trainer" />
+            <FormInputAddCourse formik={formikAddCourse} accessor="level" />
+            <FormInputAddCourse
+              formik={formikAddCourse}
+              accessor="uploadAnImage"
+            />
+            <button
+              className={AddNewCourseStyles.buttonAddCourse}
+              type="submit"
+            >
+              Add course
+            </button>
+          </form>
+        </div>
       </section>
     </div>
   );
