@@ -7,6 +7,7 @@ import { Register } from "./Register/Register";
 import { Login } from "./Login/Login";
 import { Courses } from "./Courses/Courses";
 import { AddCourse } from "./Courses/AddCourse";
+import { MyCourses } from "./Courses/MyCourses";
 
 function App() {
   return (
@@ -29,6 +30,10 @@ function App() {
 
         <Route path="addCourse">
           <Route index element={<AddCourse />} />
+        </Route>
+
+        <Route path="myCourses">
+          <Route index element={<MyCourses />} />
         </Route>
       </Routes>
     </ErrorBoundary>

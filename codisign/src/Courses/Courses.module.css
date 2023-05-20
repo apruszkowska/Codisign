@@ -67,6 +67,7 @@
 
 .eight {
   grid-area: eight;
+  width: 160px;
 }
 
 .titleCourses {
@@ -96,4 +97,35 @@ a.plusCourseLink {
   font-size: 8rem;
   font-weight: 800;
   color: #020f8f;
+}
+
+@media only screen and (min-width: 450px) and (max-width: 600px) {
+  .containerCourses {
+    background-color: grey;
+    height: 100vh;
+    background-color: rgba(238, 239, 255, 1);
+    overflow: hidden;
+    background-image: url("../assets/waves2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 600px;
+  }
+
+  .addCourseLink a {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #020f8f;
+  }
+
+  .addCourseLink {
+    overflow-wrap: break-word;
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  a.plusCourseLink {
+    font-size: 8rem;
+    font-weight: 800;
+    color: #020f8f;
+  }
 }

@@ -134,3 +134,91 @@ a {
 .buttonForm {
   margin: 30px;
 }
+
+@media only screen and (min-width: 450px) and (max-width: 600px) {
+  .register {
+    margin-left: 100px;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  ul {
+    display: flex;
+    list-style-type: none;
+    padding: 20px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .logo {
+    margin-right: 29%;
+    font-weight: 800;
+    font-size: 1.7rem;
+  }
+
+  .login {
+    margin-left: 20px;
+    font-size: 1.5rem;
+  }
+
+  .register {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    color: white;
+  }
+
+  /* main start content */
+  .mainStartContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 50px;
+  }
+
+  .titleMainStart {
+    color: white;
+    font-size: 5.2rem;
+    margin-bottom: 20px;
+  }
+
+  .descriptionMainStart {
+    font-size: 1.4rem;
+  }
+
+  .linkToCourses {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-top: 100px;
+    text-decoration: underline;
+  }
+  .containerForm {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.844);
+    border-radius: 20px;
+  }
+
+  .labelForm {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 30px 0;
+  }
+
+  .buttonForm {
+    margin: 30px;
+  }
+}
