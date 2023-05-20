@@ -26,3 +26,21 @@
 .buttonAddCourse {
   margin-top: 20px;
 }
+
+@media only screen and (min-width: 600px) {
+  .formAddCourse {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.844);
+    border-radius: 20px;
+    width: 400px;
+    padding: 20px 0;
+  }
+
+  .inputAddCourse {
+    width: 250px;
+  }
+}

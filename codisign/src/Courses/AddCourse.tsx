@@ -34,6 +34,7 @@ const FormInputAddCourse = ({
   return (
     <div>
       <TextField
+        className={AddNewCourseStyles.inputAddCourse}
         error={Boolean(formik.touched[accessor] && formik.errors[accessor])}
         helperText={
           formik.touched[accessor] && formik.errors[accessor]

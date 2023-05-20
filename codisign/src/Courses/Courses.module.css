@@ -129,3 +129,23 @@ a.plusCourseLink {
     color: #020f8f;
   }
 }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .containerCourses {
+    background-color: grey;
+    height: 100vh;
+    background-color: rgba(238, 239, 255, 1);
+    overflow: hidden;
+    background-image: url("../assets/wavesBigger.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1000px;
+  }
+
+  .addCourseLink {
+    overflow-wrap: break-word;
+    text-align: center;
+    margin-top: 100px;
+  }
+}

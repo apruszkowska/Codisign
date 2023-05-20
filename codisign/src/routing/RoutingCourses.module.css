@@ -34,3 +34,17 @@
     color: #020f8f;
   }
 }
+
+@media only screen and (min-width: 600px) {
+  .logoRoutingCourse a {
+    margin-right: 100px;
+    font-weight: 800;
+    font-size: 3rem;
+    color: #020f8f;
+  }
+  .elementAddRoutingCourse a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #020f8f;
+  }
+}
