@@ -45,7 +45,7 @@ app.post("/login", (req, res) => {
         res.status(500).send("Error occurred while registering.");
       }
 
-      if (result) {
+      if (result.length > 0) {
         res.send(result);
         res.status(200).send("Registered successfully!");
       } else {
