@@ -5,6 +5,8 @@ import { TextField } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { RoutingLinks } from "../routing/routingLinks";
 import AddNewCourseStyles from "../Courses/AddCourse.module.css";
+import { useState } from "react";
+import Axios from "axios";
 
 const yupSchema = yup.object({
   name: yup.string().required("Name jest wymagane"),
@@ -65,6 +67,12 @@ export const Register = () => {
     },
     validationSchema: yupSchema,
     onSubmit: (values: FormValues) => {
+      Axios.post("http://localhost:5175/register", {
+        login: values.login,
+        password: values.password,
+      }).then((response) => {
+        console.log(response);
+      });
       console.log({ login: values.login, password: values.password });
       alert("thanks for register");
       navigate("/login");
