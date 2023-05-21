@@ -16,7 +16,6 @@ const db = mysql.createConnection({
 });
 
 app.post("/register", (req, res) => {
-  console.log("test");
   const { login, password } = req.body;
 
   db.query(
@@ -28,6 +27,29 @@ app.post("/register", (req, res) => {
         res.status(500).send("Error occurred while registering.");
       } else {
         res.status(200).send("Registered successfully!");
+      }
+    }
+  );
+});
+
+app.post("/login", (req, res) => {
+  const { login, password } = req.body;
+
+  db.query(
+    "SELECT * FROM users WHERE login = ? AND password = ?",
+    [login, password],
+    (err, result) => {
+      if (err) {
+        console.log(err);
+        res.send({ err: err });
+        res.status(500).send("Error occurred while registering.");
+      }
+
+      if (result) {
+        res.send(result);
+        res.status(200).send("Registered successfully!");
+      } else {
+        res.send({ message: "Wrong login or password." });
       }
     }
   );
