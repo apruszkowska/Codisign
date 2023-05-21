@@ -5,7 +5,6 @@ import { TextField } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { RoutingLinks } from "../routing/routingLinks";
 import AddNewCourseStyles from "../Courses/AddCourse.module.css";
-import { useState } from "react";
 import Axios from "axios";
 
 const yupSchema = yup.object({
@@ -74,7 +73,7 @@ export const Register = () => {
         console.log(response);
       });
       console.log({ login: values.login, password: values.password });
-      alert("thanks for register");
+      alert("Thanks for register!");
       navigate("/login");
     },
   });

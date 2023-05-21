@@ -3,6 +3,9 @@ import * as yup from "yup";
 import { TextField } from "@mui/material";
 import { RoutingLinks } from "../routing/routingLinks";
 import AddNewCourseStyles from "../Courses/AddCourse.module.css";
+import Axios from "axios";
+import { useNavigate } from "react-router";
+import { useState } from "react";
 
 const yupSchema = yup.object({
   login: yup.string().required("Login is required"),
@@ -41,6 +44,9 @@ const FormInput = ({
 };
 
 export const Login = () => {
+  const navigate = useNavigate();
+  const [loginStatus, setLoginStatus] = useState("");
+
   const formik = useFormik<FormValues>({
     initialValues: {
       login: "",
@@ -48,6 +54,19 @@ export const Login = () => {
     },
     validationSchema: yupSchema,
     onSubmit: (values: FormValues) => {
+      Axios.post("http://localhost:5175/login", {
+        login: values.login,
+        password: values.password,
+      }).then((response) => {
+        if (response.data.message) {
+          setLoginStatus(response.data.message);
+        } else {
+          setLoginStatus(response.data[0].username);
+        }
+        console.log(response.data);
+      });
+      alert("You are logged in!");
+      navigate("/allCourses");
       console.log(values.login, values.password);
     },
   });
@@ -67,6 +86,7 @@ export const Login = () => {
           <button className="loginButton buttonForm" type="submit">
             Login
           </button>
+          <div>{loginStatus}</div>
         </form>
       </div>
     </div>
