@@ -9,65 +9,11 @@
   background-size: 400px;
 }
 
-.gridContainerCourses div {
-  background-color: white;
-  outline-style: #020f8f;
-  aspect-ratio: 1;
-}
-
-.grid {
-  display: grid;
-  grid-template-areas:
-    "one one two two five five six six"
-    "one one two two five five six six"
-    "three three four four seven seven eight eigth"
-    "three three four four seven seven eight eigth";
-  gap: 10px;
-  grid-template-columns: repeat(8, 75px);
-  grid-template-rows: repeat(8, 75px);
+.containerSingleCourse {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  height: 400px;
-}
-
-.grid > * {
-  background-color: rgba(255, 255, 255, 0.651);
-  border-radius: 5px;
-  padding: 10px;
-  outline: rgba(75, 39, 178, 0.74) solid;
-  overflow-wrap: break-word;
-}
-
-.one {
-  grid-area: one;
-}
-
-.two {
-  grid-area: two;
-}
-
-.three {
-  grid-area: three;
-}
-
-.four {
-  grid-area: four;
-}
-
-.five {
-  grid-area: five;
-}
-
-.six {
-  grid-area: six;
-}
-
-.seven {
-  grid-area: seven;
-}
-
-.eight {
-  grid-area: eight;
-  width: 160px;
+  text-align: center;
 }
 
 .titleCourses {
@@ -77,9 +23,10 @@
   color: #020f8f;
 }
 
-.grid div:hover {
+.courseBox:hover {
   background-color: rgba(75, 39, 178, 0.74);
   color: white;
+  transition: 0.2s;
 }
 
 .addCourseLink a {
@@ -99,6 +46,45 @@ a.plusCourseLink {
   color: #020f8f;
 }
 
+.containerCoursesBoxes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.courseBox {
+  display: flex;
+  font-size: 1.4rem;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.618);
+  margin: 0 20px;
+  border-radius: 20px;
+  outline: #020f8f solid;
+  overflow-wrap: break-word;
+  width: 170px;
+}
+
+.courseButtonEnroll {
+  width: 170px;
+  margin-top: 10px;
+  font-size: 1.3rem;
+  background-color: rgba(255, 255, 255, 0.566);
+  border-radius: 20px;
+  outline: #020f8f solid;
+}
+
+.courseImage {
+  width: 50px;
+  height: 50px;
+}
+
+.courseImg {
+  display: flex;
+  justify-content: center;
+}
 @media only screen and (min-width: 450px) and (max-width: 600px) {
   .containerCourses {
     background-color: grey;
@@ -168,6 +154,26 @@ a.plusCourseLink {
     background-position: center;
     background-size: 112vw;
   }
+
+  .courseBox {
+    width: 250px;
+    height: 250px;
+    font-size: 2rem;
+  }
+
+  .courseImage {
+    width: 80px;
+    height: 80px;
+  }
+
+  .courseButtonEnroll {
+    width: 250px;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.566);
+    border-radius: 20px;
+    outline: #020f8f solid;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -180,6 +186,26 @@ a.plusCourseLink {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 112vw;
+  }
+
+  .courseBox {
+    width: 300px;
+    height: 300px;
+    font-size: 2.3rem;
+  }
+
+  .courseImage {
+    width: 80px;
+    height: 80px;
+  }
+
+  .courseButtonEnroll {
+    width: 300px;
+    margin-top: 10px;
+    font-size: 2rem;
+    background-color: rgba(255, 255, 255, 0.566);
+    border-radius: 20px;
+    outline: #020f8f solid;
   }
 }
 
@@ -195,22 +221,25 @@ a.plusCourseLink {
     background-position: center;
     background-size: 112vw;
   }
-  .grid {
-    display: grid;
-    grid-template-areas:
-      "one one two two five five six six"
-      "one one two two five five six six"
-      "three three four four seven seven eight eigth"
-      "three three four four seven seven eight eigth";
-    gap: 10px;
-    grid-template-columns: repeat(8, 100px);
-    grid-template-rows: repeat(8, 100px);
-    justify-content: center;
-    height: 400px;
+
+  .courseBox {
+    width: 300px;
+    height: 300px;
+    font-size: 2.3rem;
   }
-  .eight {
-    grid-area: eight;
-    width: 210px;
+
+  .courseImage {
+    width: 80px;
+    height: 80px;
+  }
+
+  .courseButtonEnroll {
+    width: 300px;
+    margin-top: 10px;
+    font-size: 2rem;
+    background-color: rgba(255, 255, 255, 0.566);
+    border-radius: 20px;
+    outline: #020f8f solid;
   }
 }
 
@@ -224,19 +253,32 @@ a.plusCourseLink {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 130vw;
+    /* margin-top: 10px; */
   }
-  .grid {
-    display: grid;
-    grid-template-areas:
-      "one one two two five five six six"
-      "one one two two five five six six"
-      "three three four four seven seven eight eigth"
-      "three three four four seven seven eight eigth";
-    gap: 10px;
-    grid-template-columns: repeat(8, 100px);
-    grid-template-rows: repeat(8, 100px);
-    justify-content: center;
-    height: 400px;
+  .courseBox {
+    margin-top: 10px;
+    width: 350px;
+    height: 350px;
+    font-size: 1.8rem;
+    padding: 10px;
+  }
+
+  .courseWrap {
+    overflow: hidden;
+  }
+
+  .courseImage {
+    width: 100px;
+    height: 100px;
+  }
+
+  .courseButtonEnroll {
+    width: 350px;
+    margin-top: 10px;
+    font-size: 2rem;
+    background-color: rgba(255, 255, 255, 0.566);
+    border-radius: 20px;
+    outline: #020f8f solid;
   }
 }
 
@@ -251,26 +293,15 @@ a.plusCourseLink {
     background-position: center;
     background-size: 130vw;
   }
+  .courseBox {
+    width: 300px;
+    height: 300px;
+    font-size: 2.3rem;
+  }
 
-  .grid {
-    display: grid;
-    grid-template-areas:
-      "one one two two five five six six"
-      "one one two two five five six six"
-      "three three four four seven seven eight eigth"
-      "three three four four seven seven eight eigth";
-    gap: 10px;
-    grid-template-columns: repeat(8, 120px);
-    grid-template-rows: repeat(8, 120px);
-    justify-content: center;
-    height: 400px;
-  }
-  .eight {
-    grid-area: eight;
-    width: 250px;
-  }
-  .addCourseLink {
-    margin-top: 250px;
+  .courseImage {
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -285,23 +316,6 @@ a.plusCourseLink {
     background-position: center;
     background-size: 130vw;
   }
-  .grid {
-    display: grid;
-    grid-template-areas:
-      "one one two two five five six six"
-      "one one two two five five six six"
-      "three three four four seven seven eight eigth"
-      "three three four four seven seven eight eigth";
-    gap: 10px;
-    grid-template-columns: repeat(8, 140px);
-    grid-template-rows: repeat(8, 140px);
-    justify-content: center;
-    height: 400px;
-  }
-  .eight {
-    grid-area: eight;
-    width: 290px;
-  }
 }
 
 @media only screen and (min-width: 2000px) {
@@ -314,27 +328,6 @@ a.plusCourseLink {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 130vw;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-areas:
-      "one one two two five five six six"
-      "one one two two five five six six"
-      "three three four four seven seven eight eigth"
-      "three three four four seven seven eight eigth";
-    gap: 10px;
-    grid-template-columns: repeat(8, 160px);
-    grid-template-rows: repeat(8, 160px);
-    justify-content: center;
-    height: 400px;
-  }
-  .eight {
-    grid-area: eight;
-    width: 330px;
-  }
-  .addCourseLink {
-    margin-top: 330px;
   }
 
   .addCourseLink a {

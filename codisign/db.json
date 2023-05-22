@@ -1,0 +1,41 @@
+{
+  "allCourses": [
+    {
+      "id": 1,
+      "name": "Python for beginners",
+      "startDate": "12.08.2023",
+      "endDate": "12.09.2023",
+      "startTime": "10:00",
+      "endTime": "12:00",
+      "trainer": "Kowalski",
+      "language": "English",
+      "level": "Basic",
+      "uploadAnImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png"
+    },
+    {
+      "id": 2,
+      "name": "JavaScript for beginners",
+      "startDate": "01.08.2023",
+      "endDate": "01.09.2023",
+      "startTime": "18:00",
+      "endTime": "20:00",
+      "trainer": "Kowalski",
+      "language": "English",
+      "level": "Basic",
+      "uploadAnImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png"
+    },
+    {
+      "name": "React for beginners",
+      "startDate": "10.10.2023",
+      "endDate": "10.11.2023",
+      "startTime": "10:00",
+      "endTime": "12:00",
+      "language": "English",
+      "location": "Remote",
+      "trainer": "Kowalski",
+      "level": "Basic",
+      "uploadAnImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
+      "id": 3
+    }
+  ]
+}

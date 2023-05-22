@@ -2,40 +2,86 @@ import CoursesStyles from "./Courses.module.css";
 import { RoutingMyCourses } from "../routing/routingMyCourses";
 import { Link } from "react-router-dom";
 import { ProtectedWrapper } from "../protectedWrapper/ProtectedWrapper";
+import { useCart } from "react-use-cart";
 
 export const MyCourses = () => {
-  return (
-    <ProtectedWrapper>
+  const { isEmpty, items, removeItem } = useCart();
+  if (isEmpty)
+    return (
       <div>
         <RoutingMyCourses />
         <section className={CoursesStyles.containerCourses}>
           <div>
             <h2 className={CoursesStyles.titleCourses}>YOUR COURSES</h2>
-          </div>
-          <div className={CoursesStyles.grid}>
-            <div className={CoursesStyles.one}>1</div>
-            <div className={CoursesStyles.two}>2</div>
-            <div className={CoursesStyles.three}>3</div>
-            <div className={CoursesStyles.four}>4</div>
-            <div className={CoursesStyles.five}>5</div>
-            <div className={CoursesStyles.six}>6</div>
-            <div className={CoursesStyles.seven}>7</div>
-            <div className={CoursesStyles.eight}>8</div>
-          </div>
-
-          <div className="addNewCourse">
-            <p className={CoursesStyles.addCourseLink}>
-              <Link className={CoursesStyles.addCourseLinkText} to="/addCourse">
-                ADD NEW COURSE
-              </Link>
-
-              <Link className={CoursesStyles.plusCourseLink} to="/addCourse">
-                +
-              </Link>
-            </p>
+            <p>You have no courses!</p>
           </div>
         </section>
       </div>
-    </ProtectedWrapper>
+    );
+
+  return (
+    // <ProtectedWrapper>
+    <div>
+      <RoutingMyCourses />
+      <section className={CoursesStyles.containerCourses}>
+        <div>
+          <h2 className={CoursesStyles.titleCourses}>YOUR COURSES</h2>
+        </div>
+
+        <div className={CoursesStyles.containerCoursesBoxes}>
+          {items.map((course) => {
+            return (
+              <div className={CoursesStyles.courseBox} key={course.id}>
+                <div>
+                  <div className={CoursesStyles.courseImg}>
+                    <img
+                      className={CoursesStyles.courseImage}
+                      src={course.uploadAnImage}
+                      alt=""
+                      width="200"
+                      height="200"
+                    />
+                  </div>
+                  <div className={CoursesStyles.courseWrap}>{course.name}</div>
+                  <div className={CoursesStyles.courseWrap}>
+                    {course.startDate}
+                  </div>
+                  <div className={CoursesStyles.courseWrap}>
+                    {course.endDate}
+                  </div>
+                  <div className={CoursesStyles.courseWrap}>
+                    {course.startTime}
+                  </div>
+                  <div className={CoursesStyles.courseWrap}>
+                    {course.endTime}
+                  </div>
+                  <div className={CoursesStyles.courseWrap}>
+                    {course.trainer}
+                  </div>
+                  <div className={CoursesStyles.courseWrap}>
+                    {course.language}
+                  </div>
+                  <div className={CoursesStyles.courseWrap}>{course.level}</div>
+                </div>
+                <button onClick={() => removeItem(course.id)}>Quit</button>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="addNewCourse">
+          <p className={CoursesStyles.addCourseLink}>
+            <Link className={CoursesStyles.addCourseLinkText} to="/addCourse">
+              ADD NEW COURSE
+            </Link>
+
+            <Link className={CoursesStyles.plusCourseLink} to="/addCourse">
+              +
+            </Link>
+          </p>
+        </div>
+      </section>
+    </div>
+    //  </ProtectedWrapper>
   );
 };

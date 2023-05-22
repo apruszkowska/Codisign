@@ -8,6 +8,9 @@ import { Courses } from "./Courses/Courses";
 import { AddCourse } from "./Courses/AddCourse";
 import { MyCourses } from "./Courses/MyCourses";
 import { UsersProvider } from "./contexts/UserContext";
+import { SingleCourse } from "./Courses/SingleCourse";
+import { useState } from "react";
+import { CartProvider } from "react-use-cart";
 
 function App() {
   return (
@@ -26,7 +29,17 @@ function App() {
           </Route>
 
           <Route path="allCourses">
-            <Route index element={<Courses />} />
+            <Route
+              index
+              element={
+                <CartProvider>
+                  <Courses />
+                </CartProvider>
+              }
+            />
+            <Route path=":id">
+              <Route index element={<SingleCourse />} />
+            </Route>
           </Route>
 
           <Route path="addCourse">
@@ -34,7 +47,14 @@ function App() {
           </Route>
 
           <Route path="myCourses">
-            <Route index element={<MyCourses />} />
+            <Route
+              index
+              element={
+                <CartProvider>
+                  <MyCourses />
+                </CartProvider>
+              }
+            />
           </Route>
         </Routes>
       </UsersProvider>

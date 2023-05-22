@@ -5,6 +5,7 @@ import { useFormik, FormikProps } from "formik";
 import * as yup from "yup";
 import { TextField } from "@mui/material";
 import { ProtectedWrapper } from "../protectedWrapper/ProtectedWrapper";
+import { addCourse } from "../api/courses";
 
 const yupSchema = yup.object({
   name: yup.string().required("Please name your course"),
@@ -55,7 +56,7 @@ const FormInputAddCourse = ({
 };
 
 export const AddCourse = () => {
-  const formikAddCourse = useFormik<FormValuesAddCourse>({
+  const formik = useFormik<FormValuesAddCourse>({
     initialValues: {
       name: "",
       startDate: "",
@@ -69,61 +70,45 @@ export const AddCourse = () => {
       uploadAnImage: "",
     },
     onSubmit: (values: FormValuesAddCourse) => {
-      //   addCourse(values).then((data) => {
-      //     console.log("success", data);
-      //   });
-      console.log("success", values);
+      addCourse(values).then((data) => {
+        console.log("success", data);
+      });
     },
     validationSchema: yupSchema,
   });
   return (
-    <ProtectedWrapper>
-      <div>
-        <RoutingAddingLinks />
-        <section className={CoursesStyles.containerCourses}>
-          <h2 className={AddNewCourseStyles.titleAddCourse}>
-            Add your course!
-          </h2>
-          <div className={AddNewCourseStyles.containerAddCourse}>
-            <form
-              className={AddNewCourseStyles.formAddCourse}
-              onSubmit={formikAddCourse.handleSubmit}
+    // <ProtectedWrapper>
+    <div>
+      <RoutingAddingLinks />
+      <section className={CoursesStyles.containerCourses}>
+        <h2 className={AddNewCourseStyles.titleAddCourse}>Add your course!</h2>
+        <div className={AddNewCourseStyles.containerAddCourse}>
+          <form
+            className={AddNewCourseStyles.formAddCourse}
+            onSubmit={formik.handleSubmit}
+          >
+            <FormInputAddCourse formik={formik} accessor="name" />
+            <FormInputAddCourse formik={formik} accessor="startDate" />
+            <FormInputAddCourse formik={formik} accessor="endDate" />
+            <FormInputAddCourse formik={formik} accessor="startTime" />
+            <FormInputAddCourse formik={formik} accessor="endTime" />
+            <FormInputAddCourse formik={formik} accessor="language" />
+            <FormInputAddCourse formik={formik} accessor="location" />
+            <FormInputAddCourse formik={formik} accessor="trainer" />
+            <FormInputAddCourse formik={formik} accessor="level" />
+            <FormInputAddCourse formik={formik} accessor="uploadAnImage" />
+            <button
+              className={AddNewCourseStyles.buttonAddCourse}
+              type="submit"
             >
-              <FormInputAddCourse formik={formikAddCourse} accessor="name" />
-              <FormInputAddCourse
-                formik={formikAddCourse}
-                accessor="startDate"
-              />
-              <FormInputAddCourse formik={formikAddCourse} accessor="endDate" />
-              <FormInputAddCourse
-                formik={formikAddCourse}
-                accessor="startTime"
-              />
-              <FormInputAddCourse formik={formikAddCourse} accessor="endTime" />
-              <FormInputAddCourse
-                formik={formikAddCourse}
-                accessor="language"
-              />
-              <FormInputAddCourse
-                formik={formikAddCourse}
-                accessor="location"
-              />
-              <FormInputAddCourse formik={formikAddCourse} accessor="trainer" />
-              <FormInputAddCourse formik={formikAddCourse} accessor="level" />
-              <FormInputAddCourse
-                formik={formikAddCourse}
-                accessor="uploadAnImage"
-              />
-              <button
-                className={AddNewCourseStyles.buttonAddCourse}
-                type="submit"
-              >
-                Add course
-              </button>
-            </form>
-          </div>
-        </section>
-      </div>
-    </ProtectedWrapper>
+              Add course
+            </button>
+          </form>
+        </div>
+      </section>
+    </div>
+    // </ProtectedWrapper>
   );
 };
+
+export default AddCourse;
