@@ -7,7 +7,7 @@ export const RoutingMyCourses = () => {
       <nav>
         <ul>
           <li className={RoutingCoursesStyles.logoRoutingCourse}>
-            <Link to="/">CODISIGN</Link>
+            <Link to="/myCourses">CODISIGN</Link>
           </li>
           <li className={RoutingCoursesStyles.elementRoutingCourse}>
             <Link to="/allCourses">ALL COURSES</Link>
