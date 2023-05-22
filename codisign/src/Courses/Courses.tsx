@@ -2,6 +2,7 @@ import CoursesStyles from "./Courses.module.css";
 import { RoutingCourses } from "../routing/routingCourses";
 import { Link } from "react-router-dom";
 import { ProtectedWrapper } from "../protectedWrapper/ProtectedWrapper";
+import { useQuery } from "@tanstack/react-query";
 
 export const Courses = () => {
   return (
