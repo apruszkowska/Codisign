@@ -42,12 +42,10 @@ app.post("/login", (req, res) => {
       if (err) {
         console.log(err);
         res.send({ err: err });
-        res.status(500).send("Error occurred while registering.");
       }
 
       if (result.length > 0) {
         res.send(result);
-        res.status(200).send("Registered successfully!");
       } else {
         res.send({ message: "Wrong login or password." });
       }

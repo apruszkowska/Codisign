@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { RoutingLinks } from "../routing/routingLinks";
 import AddNewCourseStyles from "../Courses/AddCourse.module.css";
 import Axios from "axios";
+import { useUsersContext } from "../contexts/UserContext";
 
 const yupSchema = yup.object({
   name: yup.string().required("Name jest wymagane"),
@@ -53,7 +54,8 @@ const FormInput = ({
 };
 
 export const Register = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
+  const { registerUser } = useUsersContext();
 
   const formik = useFormik<FormValues>({
     initialValues: {
@@ -66,15 +68,16 @@ export const Register = () => {
     },
     validationSchema: yupSchema,
     onSubmit: (values: FormValues) => {
-      Axios.post("http://localhost:5175/register", {
-        login: values.login,
-        password: values.password,
-      }).then((response) => {
-        console.log(response);
-      });
-      console.log({ login: values.login, password: values.password });
-      alert("Thanks for register!");
-      navigate("/login");
+      registerUser(values.login, values.password);
+      // Axios.post("http://localhost:5175/register", {
+      //   login: values.login,
+      //   password: values.password,
+      // }).then((response) => {
+      //   console.log(response);
+      // });
+      // console.log({ login: values.login, password: values.password });
+      // alert("Thanks for register!");
+      // navigate("/login");
     },
   });
   return (
