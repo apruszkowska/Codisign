@@ -24,7 +24,7 @@ app.post("/register", (req, res) => {
     (err, result) => {
       if (err) {
         console.log(err);
-        res.status(500).send("Error occurred while registering.");
+        res.status(500).send("Error occurred while registering. ");
       } else {
         res.status(200).send("Registered successfully!!");
       }
