@@ -28,7 +28,7 @@ export const UsersProvider = ({ children }: { children: ReactNode }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
-  // check if user is logged in after registration
+  // check if user is logged in after registrationn
   useEffect(() => {
     console.log(isLoggedIn);
   });
