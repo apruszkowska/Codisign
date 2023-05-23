@@ -2,11 +2,12 @@
   background-color: grey;
   height: 100vh;
   background-color: rgba(238, 239, 255, 1);
-  overflow: hidden;
+
   background-image: url("../assets/waves2.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 400px;
+  overflow: scroll;
 }
 
 .containerSingleCourse {
@@ -19,8 +20,8 @@
 .titleCourses {
   font-size: 3rem;
   text-align: center;
-  margin: 70px 0;
   color: #020f8f;
+  margin: 2.2rem 0;
 }
 
 .courseBox:hover {
@@ -54,26 +55,25 @@ a.plusCourseLink {
 }
 
 .courseBox {
-  display: flex;
-  font-size: 1.4rem;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  font-size: 0.8rem;
   text-align: center;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.618);
-  margin: 0 20px;
+  margin: 20px;
   border-radius: 20px;
   outline: #020f8f solid;
+  background-color: rgba(255, 255, 255, 0.618);
   overflow-wrap: break-word;
-  width: 170px;
+  grid-gap: 0.8rem;
 }
 
 .courseButtonEnroll {
-  width: 170px;
-  margin-top: 10px;
-  font-size: 1.3rem;
-  background-color: rgba(255, 255, 255, 0.566);
+  font-size: 1.5rem;
+  background-color: transparent;
   border-radius: 20px;
-  outline: #020f8f solid;
+  border: none;
+  color: #020f8f;
+  font-weight: 800;
 }
 
 .courseImage {
@@ -85,16 +85,35 @@ a.plusCourseLink {
   display: flex;
   justify-content: center;
 }
+
+.ifEmptyCourses {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.noCourses {
+  font-size: 3rem;
+  margin: 10rem;
+  color: #020f8f;
+  background-color: rgba(255, 255, 255, 0.718);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.noCourseLink {
+  color: #020f8f;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
 @media only screen and (min-width: 450px) and (max-width: 600px) {
   .containerCourses {
-    background-color: grey;
     height: 100vh;
-    background-color: rgba(238, 239, 255, 1);
-    overflow: hidden;
-    background-image: url("../assets/waves2.png");
+
+    background-image: url("../assets/wavesBigger.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 600px;
+    background-size: 150vw;
   }
 
   .addCourseLink a {
@@ -106,13 +125,22 @@ a.plusCourseLink {
   .addCourseLink {
     overflow-wrap: break-word;
     text-align: center;
-    margin-top: 100px;
   }
 
   a.plusCourseLink {
     font-size: 8rem;
     font-weight: 800;
     color: #020f8f;
+  }
+
+  .courseBox {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    font-size: 1.2rem;
+    grid-gap: 0.8rem;
+  }
+
+  .courseButtonEnroll {
+    font-size: 2rem;
   }
 }
 
@@ -122,15 +150,11 @@ a.plusCourseLink {
     background-color: grey;
     height: 100vh;
     background-color: rgba(238, 239, 255, 1);
-    overflow: hidden;
+
     background-image: url("../assets/wavesBigger.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 1000px;
-  }
-
-  .addCourseLink {
-    margin-top: 50px;
   }
 
   a.addCourseLinkText {
@@ -139,7 +163,18 @@ a.plusCourseLink {
   }
 
   .titleCourses {
-    font-size: 4rem;
+    font-size: 3.5rem;
+    margin: 30px 0;
+  }
+
+  .courseBox {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    font-size: 1.2rem;
+    grid-gap: 0.8rem;
+  }
+
+  .courseButtonEnroll {
+    font-size: 2rem;
   }
 }
 
@@ -148,17 +183,11 @@ a.plusCourseLink {
     background-color: grey;
     height: 100vh;
     background-color: rgba(238, 239, 255, 1);
-    overflow: hidden;
+
     background-image: url("../assets/wavesBigger.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 112vw;
-  }
-
-  .courseBox {
-    width: 250px;
-    height: 250px;
-    font-size: 2rem;
   }
 
   .courseImage {
@@ -166,13 +195,14 @@ a.plusCourseLink {
     height: 80px;
   }
 
-  .courseButtonEnroll {
-    width: 250px;
-    margin-top: 10px;
+  .courseBox {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     font-size: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.566);
-    border-radius: 20px;
-    outline: #020f8f solid;
+    grid-gap: 1rem;
+  }
+
+  .courseButtonEnroll {
+    font-size: 3rem;
   }
 }
 
@@ -181,17 +211,11 @@ a.plusCourseLink {
     background-color: grey;
     height: 100vh;
     background-color: rgba(238, 239, 255, 1);
-    overflow: hidden;
+
     background-image: url("../assets/wavesBigger.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 112vw;
-  }
-
-  .courseBox {
-    width: 300px;
-    height: 300px;
-    font-size: 2.3rem;
   }
 
   .courseImage {
@@ -199,13 +223,22 @@ a.plusCourseLink {
     height: 80px;
   }
 
+  .courseBox {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    font-size: 1.6rem;
+    grid-gap: 0.5rem;
+  }
+
   .courseButtonEnroll {
-    width: 300px;
-    margin-top: 10px;
-    font-size: 2rem;
-    background-color: rgba(255, 255, 255, 0.566);
-    border-radius: 20px;
-    outline: #020f8f solid;
+    font-size: 2.5rem;
+  }
+
+  .addCourseLink a {
+    font-size: 3.6rem;
+  }
+
+  .titleCourses {
+    font-size: 4.2rem;
   }
 }
 
@@ -215,17 +248,11 @@ a.plusCourseLink {
     background-color: grey;
     height: 100vh;
     background-color: rgba(238, 239, 255, 1);
-    overflow: hidden;
+
     background-image: url("../assets/wavesBigger.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 112vw;
-  }
-
-  .courseBox {
-    width: 300px;
-    height: 300px;
-    font-size: 2.3rem;
   }
 
   .courseImage {
@@ -233,13 +260,22 @@ a.plusCourseLink {
     height: 80px;
   }
 
+  .courseBox {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    font-size: 1.8rem;
+    grid-gap: 0.2rem;
+  }
+
   .courseButtonEnroll {
-    width: 300px;
-    margin-top: 10px;
-    font-size: 2rem;
-    background-color: rgba(255, 255, 255, 0.566);
-    border-radius: 20px;
-    outline: #020f8f solid;
+    font-size: 2.8rem;
+  }
+
+  .addCourseLink a {
+    font-size: 4rem;
+  }
+
+  .titleCourses {
+    font-size: 4.5rem;
   }
 }
 
@@ -248,60 +284,70 @@ a.plusCourseLink {
     background-color: grey;
     height: 100vh;
     background-color: rgba(238, 239, 255, 1);
-    overflow: hidden;
+
     background-image: url("../assets/wavesBigger3.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 130vw;
     /* margin-top: 10px; */
   }
-  .courseBox {
-    margin-top: 10px;
-    width: 350px;
-    height: 350px;
-    font-size: 1.8rem;
-    padding: 10px;
-  }
-
-  .courseWrap {
-    overflow: hidden;
-  }
 
   .courseImage {
     width: 100px;
     height: 100px;
   }
+  .courseBox {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    font-size: 1.8rem;
+    grid-gap: 0.2rem;
+  }
 
   .courseButtonEnroll {
-    width: 350px;
-    margin-top: 10px;
-    font-size: 2rem;
-    background-color: rgba(255, 255, 255, 0.566);
-    border-radius: 20px;
-    outline: #020f8f solid;
+    font-size: 2.8rem;
+  }
+
+  .addCourseLink a {
+    font-size: 4rem;
+  }
+
+  .titleCourses {
+    font-size: 5rem;
   }
 }
 
 @media only screen and (min-width: 1600px) {
   .containerCourses {
     background-color: grey;
-    height: 100vh;
+
     background-color: rgba(238, 239, 255, 1);
-    overflow: hidden;
+
     background-image: url("../assets/wavesBigger3.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 130vw;
-  }
-  .courseBox {
-    width: 300px;
-    height: 300px;
-    font-size: 2.3rem;
+    /* margin-top: 10px; */
   }
 
   .courseImage {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
+  }
+  .courseBox {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    font-size: 2rem;
+    grid-gap: 0.2rem;
+  }
+
+  .courseButtonEnroll {
+    font-size: 2.8rem;
+  }
+
+  .addCourseLink a {
+    font-size: 4.6rem;
+  }
+
+  .titleCourses {
+    font-size: 5.5rem;
   }
 }
 
@@ -310,11 +356,27 @@ a.plusCourseLink {
     background-color: grey;
     height: 100vh;
     background-color: rgba(238, 239, 255, 1);
-    overflow: hidden;
     background-image: url("../assets/wavesBigger3.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 130vw;
+  }
+
+  .courseBox {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    font-size: 2.2rem;
+  }
+
+  .courseButtonEnroll {
+    font-size: 2.8rem;
+  }
+
+  .addCourseLink a {
+    font-size: 5.5rem;
+  }
+
+  .titleCourses {
+    font-size: 5.5rem;
   }
 }
 
@@ -323,7 +385,6 @@ a.plusCourseLink {
     background-color: grey;
     height: 100vh;
     background-color: rgba(238, 239, 255, 1);
-    overflow: hidden;
     background-image: url("../assets/wavesBigger3.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -331,6 +392,20 @@ a.plusCourseLink {
   }
 
   .addCourseLink a {
+    font-size: 6rem;
+    padding: 100px 0;
+  }
+
+  .titleCourses {
+    font-size: 8rem;
+  }
+
+  .courseBox {
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    font-size: 2.8rem;
+  }
+
+  .courseButtonEnroll {
     font-size: 5rem;
   }
 }

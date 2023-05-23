@@ -58,39 +58,42 @@ export const Login = () => {
     validationSchema: yupSchema,
     onSubmit: (values: FormValues) => {
       logIn(values.login, values.password);
-      // Axios.post("http://localhost:5175/login", {
-      //   login: values.login,
-      //   password: values.password,
-      // }).then((response) => {
-      //   if (response.data.message) {
-      //     setLoginStatus(response.data.message);
-      //   } else {
-      //     setLoginStatus(response.data[0].login);
-      //     alert("You are logged in!");
-      //     navigate("/allCourses");
-      //   }
-      // });
     },
   });
 
   return (
     <div>
       <RoutingLinks />
-      <div className="containerLoginForm containerForm">
-        <form className="loginForm form" onSubmit={formik.handleSubmit}>
-          <label className="loginLabel labelForm" htmlFor="form">
-            Login
-          </label>
-          <div className="loginFormInput formInput">
-            <FormInput formik={formik} accessor="login" />
-            <FormInput formik={formik} accessor="password" />
-          </div>
-          <button className="loginButton buttonForm" type="submit">
-            Login
-          </button>
-          <div>{loginStatus}</div>
-        </form>
-      </div>
+      <section className="formContainer">
+        <div className="containerLoginForm containerForm">
+          <form className="loginForm form" onSubmit={formik.handleSubmit}>
+            <label className="loginLabel labelForm" htmlFor="form">
+              Login
+            </label>
+            <div className="loginFormInput formInput">
+              <FormInput formik={formik} accessor="login" />
+              <FormInput formik={formik} accessor="password" />
+            </div>
+            <div className="containerButtonForm">
+              <div>
+                <button className="loginButton buttonForm" type="submit">
+                  Login
+                </button>
+              </div>
+              <div>or</div>
+              <div>
+                <button
+                  className="createAnAccountButton buttonForm"
+                  type="submit"
+                >
+                  Create an account
+                </button>
+              </div>
+            </div>
+            <div>{loginStatus}</div>
+          </form>
+        </div>
+      </section>
     </div>
   );
 };

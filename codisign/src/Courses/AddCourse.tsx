@@ -6,6 +6,7 @@ import * as yup from "yup";
 import { TextField } from "@mui/material";
 import { ProtectedWrapper } from "../protectedWrapper/ProtectedWrapper";
 import { addCourse } from "../api/courses";
+import { useNavigate } from "react-router";
 
 const yupSchema = yup.object({
   name: yup.string().required("Please name your course"),
@@ -56,6 +57,7 @@ const FormInputAddCourse = ({
 };
 
 export const AddCourse = () => {
+  const navigate = useNavigate();
   const formik = useFormik<FormValuesAddCourse>({
     initialValues: {
       name: "",
@@ -72,6 +74,7 @@ export const AddCourse = () => {
     onSubmit: (values: FormValuesAddCourse) => {
       addCourse(values).then((data) => {
         console.log("success", data);
+        navigate("/allCourses");
       });
     },
     validationSchema: yupSchema,

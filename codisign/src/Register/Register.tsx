@@ -69,15 +69,6 @@ export const Register = () => {
     validationSchema: yupSchema,
     onSubmit: (values: FormValues) => {
       registerUser(values.login, values.password);
-      // Axios.post("http://localhost:5175/register", {
-      //   login: values.login,
-      //   password: values.password,
-      // }).then((response) => {
-      //   console.log(response);
-      // });
-      // console.log({ login: values.login, password: values.password });
-      // alert("Thanks for register!");
-      // navigate("/login");
     },
   });
   return (
@@ -100,7 +91,10 @@ export const Register = () => {
               type="password"
             />
           </div>
-          <button className="registerButton buttonForm" type="submit">
+          <button
+            className="registerButton buttonForm createAnAccountButton "
+            type="submit"
+          >
             Register
           </button>
         </form>

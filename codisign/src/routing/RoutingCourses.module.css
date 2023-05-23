@@ -5,15 +5,15 @@
 .logoRoutingCourse a {
   margin-right: 29%;
   font-weight: 800;
-  font-size: 1.7rem;
+  font-size: 2rem;
   color: #020f8f;
 }
 
 .elementRoutingCourse a {
-  /* margin-left: 100px; */
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #020f8f;
+  width: 100%;
 }
 
 .elementAddRoutingCourse a {
@@ -39,11 +39,15 @@ ul {
 }
 
 @media only screen and (min-width: 450px) and (max-width: 600px) {
+  .logoRoutingCourse a {
+    font-size: 2rem;
+  }
+
   .elementRoutingCourse a {
-    margin-left: 250px;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #020f8f;
+    font-size: 1.8rem;
+  }
+  .elementRoutingCourse a {
+    margin-left: 190px;
   }
 }
 
@@ -67,8 +71,48 @@ ul {
   }
 }
 
-@media only screen and (min-width: 450px) and (max-width: 600px) {
+@media only screen and (min-width: 1400px) {
+  .logoRoutingCourse a {
+    font-size: 4rem;
+  }
+
+  .elementAddRoutingCourse a {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #020f8f;
+  }
+
   .elementRoutingCourse a {
-    margin-left: 190px;
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .logoRoutingCourse a {
+    font-size: 4rem;
+  }
+
+  .elementRoutingCourse a {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .logoRoutingCourse a {
+    font-size: 4.5rem;
+  }
+
+  .elementRoutingCourse a {
+    font-size: 4.5rem;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .logoRoutingCourse a {
+    font-size: 5rem;
+  }
+
+  .elementRoutingCourse a {
+    font-size: 5rem;
   }
 }

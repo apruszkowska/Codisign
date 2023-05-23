@@ -68,13 +68,11 @@ a {
 }
 
 .logo {
-  margin-right: 29%;
   font-weight: 800;
   font-size: 1.7rem;
 }
 
 .login {
-  margin-left: 20px;
   font-size: 1.5rem;
 }
 
@@ -82,6 +80,10 @@ a {
   font-size: 1.5rem;
   text-decoration: underline;
   color: white;
+}
+
+.registerAndLoginContainer {
+  display: flex;
 }
 
 /* main start content */
@@ -132,9 +134,27 @@ a {
 }
 
 .buttonForm {
-  margin: 30px;
+  margin: 12px;
+  padding: 10px 40px;
+  /* font-size: 1rem; */
+  color: #020f8f;
+  background-color: transparent;
+  border-radius: 10px;
+}
+.loginButton {
+  background-color: #4926ad;
+  color: white;
+  border: none;
 }
 
+.createAnAccountButton {
+  background-color: #4a26ad7a;
+  color: #020f8f;
+  border: none;
+}
+.containerButtonForm {
+  font-size: 1.2rem;
+}
 @media only screen and (min-width: 450px) and (max-width: 600px) {
   .register {
     margin-left: 100px;
@@ -217,10 +237,6 @@ a {
     font-weight: 700;
     margin: 30px 0;
   }
-
-  .buttonForm {
-    margin: 30px;
-  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -284,6 +300,30 @@ a {
   .containerForm {
     margin-top: 60px;
   }
+
+  .buttonForm {
+    margin: 12px;
+    padding: 10px 40px;
+    font-size: 1.5rem;
+    color: #020f8f;
+    background-color: transparent;
+    border-radius: 10px;
+  }
+  .loginButton {
+    background-color: #4926ad;
+    color: white;
+    border: none;
+  }
+
+  .createAnAccountButton {
+    background-color: #4a26ad7a;
+    color: #020f8f;
+    border: none;
+  }
+
+  .login {
+    padding: 0 30px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -341,6 +381,30 @@ a {
 
   .containerForm {
     margin-top: 70px;
+  }
+  .buttonForm {
+    margin: 12px;
+    padding: 10px 40px;
+    /* font-size: 1rem; */
+    color: #020f8f;
+    background-color: transparent;
+    border-radius: 10px;
+  }
+  .loginButton {
+    background-color: #4926ad;
+    color: white;
+    border: none;
+    font-size: 2rem;
+  }
+
+  .createAnAccountButton {
+    background-color: #4a26ad7a;
+    color: #020f8f;
+    border: none;
+    font-size: 2rem;
+  }
+  .containerButtonForm {
+    font-size: 2rem;
   }
 }
 
@@ -401,8 +465,216 @@ a {
   .containerForm {
     margin-top: 70px;
   }
+  .buttonForm {
+    margin: 12px;
+    padding: 10px 40px;
+    /* font-size: 1rem; */
+    color: #020f8f;
+    background-color: transparent;
+    border-radius: 10px;
+  }
+  .loginButton {
+    background-color: #4926ad;
+    color: white;
+    border: none;
+    font-size: 2rem;
+  }
+
+  .createAnAccountButton {
+    background-color: #4a26ad7a;
+    color: #020f8f;
+    border: none;
+    font-size: 2rem;
+  }
+  .containerButtonForm {
+    font-size: 2rem;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  .buttonForm {
+    margin: 12px;
+    padding: 10px 40px;
+    /* font-size: 1rem; */
+    color: #020f8f;
+    background-color: transparent;
+    border-radius: 10px;
+  }
+  .loginButton {
+    background-color: #4926ad;
+    color: white;
+    border: none;
+    font-size: 2.2rem;
+  }
+
+  .createAnAccountButton {
+    background-color: #4a26ad7a;
+    color: #020f8f;
+    border: none;
+    font-size: 2.2rem;
+  }
+  .containerButtonForm {
+    font-size: 2.2rem;
+  }
+  .logo,
+  .register,
+  .login {
+    font-size: 3.2rem;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .buttonForm {
+    margin: 12px;
+    padding: 10px 40px;
+    /* font-size: 1rem; */
+    color: #020f8f;
+    background-color: transparent;
+    border-radius: 10px;
+  }
+  .loginButton {
+    background-color: #4926ad;
+    color: white;
+    border: none;
+    font-size: 2.2rem;
+  }
+
+  .createAnAccountButton {
+    background-color: #4a26ad7a;
+    color: #020f8f;
+    border: none;
+    font-size: 2.2rem;
+  }
+  .containerButtonForm {
+    font-size: 2.2rem;
+  }
+  .logo,
+  .register,
+  .login {
+    font-size: 3.3rem;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .buttonForm {
+    margin: 12px;
+    padding: 10px 40px;
+    /* font-size: 1rem; */
+    color: #020f8f;
+    background-color: transparent;
+    border-radius: 10px;
+  }
+  .loginButton {
+    background-color: #4926ad;
+    color: white;
+    border: none;
+    font-size: 2.5rem;
+  }
+
+  .createAnAccountButton {
+    background-color: #4a26ad7a;
+    color: #020f8f;
+    border: none;
+    font-size: 2.5rem;
+  }
+  .containerButtonForm {
+    font-size: 2.5rem;
+  }
+
+  html,
+  body {
+    height: 100%;
+    font-family: "Lexend", sans-serif;
+    font-size: 10px;
+    background: url("./assets/waves3.png") no-repeat bottom,
+      linear-gradient(to bottom, #343563 0%, #4926ad 100%);
+    background-size: contain;
+  }
+  .logo,
+  .register,
+  .login {
+    font-size: 3.5rem;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .buttonForm {
+    margin: 12px;
+    padding: 10px 40px;
+    /* font-size: 1rem; */
+    color: #020f8f;
+    background-color: transparent;
+    border-radius: 10px;
+  }
+  .loginButton {
+    background-color: #4926ad;
+    color: white;
+    border: none;
+    font-size: 2.5rem;
+  }
+
+  .createAnAccountButton {
+    background-color: #4a26ad7a;
+    color: #020f8f;
+    border: none;
+    font-size: 2.5rem;
+  }
+  .containerButtonForm {
+    font-size: 2.5rem;
+  }
+  html,
+  body {
+    height: 100%;
+    font-family: "Lexend", sans-serif;
+    font-size: 10px;
+    background: url("./assets/waves3.png") no-repeat bottom,
+      linear-gradient(to bottom, #343563 0%, #4926ad 100%);
+    background-size: contain;
+  }
+  .logo,
+  .register,
+  .login {
+    font-size: 3.8rem;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .buttonForm {
+    margin: 12px;
+    padding: 10px 40px;
+    /* font-size: 1rem; */
+    color: #020f8f;
+    background-color: transparent;
+    border-radius: 10px;
+  }
+  .loginButton {
+    background-color: #4926ad;
+    color: white;
+    border: none;
+    font-size: 2.5rem;
+  }
+
+  .createAnAccountButton {
+    background-color: #4a26ad7a;
+    color: #020f8f;
+    border: none;
+    font-size: 2.5rem;
+  }
+  .containerButtonForm {
+    font-size: 2.5rem;
+  }
+  html,
+  body {
+    height: 100%;
+    font-family: "Lexend", sans-serif;
+    font-size: 10px;
+    background: url("./assets/waves3.png") no-repeat bottom,
+      linear-gradient(to bottom, #343563 0%, #4926ad 100%);
+    background-size: contain;
+  }
+
+  .logo,
+  .register,
+  .login {
+    font-size: 4rem;
+  }
 }

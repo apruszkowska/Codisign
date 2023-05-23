@@ -36,6 +36,19 @@
       "level": "Basic",
       "uploadAnImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
       "id": 3
+    },
+    {
+      "name": "Machine Learning",
+      "startDate": "12 lipca 2023",
+      "endDate": "14 lipca 2023",
+      "startTime": "10",
+      "endTime": "12",
+      "language": "English",
+      "location": "Warsaw",
+      "trainer": "Luke Skywalker",
+      "level": "Basic",
+      "uploadAnImage": "https://cdn-icons-png.flaticon.com/512/3222/3222625.png",
+      "id": 4
     }
   ]
 }
